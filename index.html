@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+    }
+
+    header .logo img{
+		float: left;
+		width: 70px; height: auto;
+	}
+
+    header nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    main article {
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    main img {
+      width: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #f1f1f1;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      header nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      footer {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="#">
+            <img src="logo.png" alt="Logo">
+        </a>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1>Welcome to my website!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lacus eget nunc tincidunt laoreet. Nunc eget lacus eget nunc tincidunt laoreet. Maecenas eget lacus eget nunc tincidunt laoreet.</p>
+    </article>
+    <img src="pic_4.jpg" alt="Image">
+  </main>
+  <footer>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+</body>
+</html>
